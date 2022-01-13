@@ -1,0 +1,226 @@
+.bg-navbar1{
+    background-color: #292929;
+}
+.navbar1-brand{
+    margin: 0;
+    
+    padding: 0;
+}
+.nav-item1 .nav-link{
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.0rem;
+}
+.navbar1-brand img{
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+    width: 150px;
+    height: 100px;
+}
+.homepage-header-main{
+    color: white;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+}
+.homepage-header-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    filter: blur(1.5px);
+}
+.homepage-header-video video{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    align-self: stretch;
+    
+}
+.header-title-container{
+    display: flex;
+    display: -ms-flexbox;
+    flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
+    flex-wrap: wrap;
+    width: fit-content;
+}
+.student-home-header{
+    text-align: center;
+    font-size: 3rem;
+    height: 310px;
+    overflow: visible;
+    background-color: #6ACB9A;
+}
+
+.ukp-home-header{
+    text-align: center;
+    font-size: 3rem;
+    height: 310px;
+    overflow: visible;
+    background-color: #6ACB9A;
+}
+
+.student-home-content{
+    background-image: url(/etabung/resources/views/assets/gambar3.jpg);
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.ukp-home-content{
+    text-align: center;
+    background-image: url(/etabung/resources/views/assets/gambar3.jpg);
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.form-content{
+    text-align: left;
+    background-image: url(/etabung/resources/views/assets/gambar3.jpg);
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.student-home-content .student-activity-table{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: grey;
+    width: 400px;
+}
+.activity-title{
+    font-family: 'Roboto Slab', serif;
+    padding-inline-start: 10px;
+}
+.activity-count{
+    justify-self: right;
+}
+.activity-title, .activity-count{
+    line-height: 200%;
+    margin: 0;
+}
+.student-home-content .student-activity-table .activity-title li{
+    list-style-type: none;
+    grid-column: 1;
+}
+.student-home-content .student-activity-table .activity-count li{
+    list-style-type: none;
+    grid-column: 2;
+}
+.default-user{
+    vertical-align: middle;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: thistle;
+}
+
+.activity-banner{
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 50px;
+}
+.activity-banner span{
+    background-color: #639ECD;
+    color: black;
+    font-family: 'Bree Serif', serif;
+    font-size: 1.5rem;
+}
+
+.aids-logo{
+    height: 210px;
+    width: 340px; 
+    border: 5px solid #555; 
+    border-radius: 10px;
+    overflow: visible;
+}
+
+.aids-btn{
+    background-color: turquoise;
+    border-radius: 5px;
+    padding: 10px; 
+    color:black; 
+    width: 320px;
+    position: center;
+    font-weight: bold;
+
+}
+.page-footer{
+    color: white;
+    background-image: url(/etabung/resources/views/assets/gambar4.jpg);
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+}
+.page-footer a{
+    text-decoration: none;
+}
+
+.logout-content{
+    text-align: center;
+    background-image: url(/etabung/resources/views/assets/3pen.jpg);
+    background-position: center;
+    background-attachment: scroll;
+    background-size: cover;
+    height:500px;
+    vertical-align: middle;
+    display: flexbox;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.logout-text{
+    text-align: middle;
+    height: 300px;
+    background-color: #555;
+    position: center;
+    vertical-align: middle;
+    width: 450px;
+    top: 50%;
+    
+    
+}
+.logout-text h2 {
+    vertical-align: middle;
+}
+
+.application-type-title{
+    font-family: 'Roboto Slab', serif;
+}
+.application-form-container{
+    background-image: url(/etabung/resources/views/assets/activity-container-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.application-form-container{
+    background-image: url(/etabung/resources/views/assets/activity-container-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.application-verification-container{
+    height: 400px;
+    background-color: #6ACB9A;
+    vertical-align: middle;
+}
+
+.application-details-container{
+    width: 60%;
+    padding: 10px;
+    background-color: #6ACB9A;
+    vertical-align: middle;
+}
+
+.application-details-table{
+    
+    position: center;
+    vertical-align: middle;
+}
