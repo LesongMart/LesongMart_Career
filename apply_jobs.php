@@ -387,54 +387,54 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             // Attempt to execute the prepared statement
             if(mysqli_stmt_execute($stmt)){
 
-            $message = "
-            <h2>Permohonan Pekerjaan.</h2>
-            <p>Satu permohonan baru telah dilakukan. Sila semak dan berikan pengesahan permohonan segera!</p>
-            <p>Maklumat pemohon:</p>
-            <p>Email: ".$param_email."</p>
-            <p>Nama: ".$param_fullname."</p>";
+//             $message = "
+//             <h2>Permohonan Pekerjaan.</h2>
+//             <p>Satu permohonan baru telah dilakukan. Sila semak dan berikan pengesahan permohonan segera!</p>
+//             <p>Maklumat pemohon:</p>
+//             <p>Email: ".$param_email."</p>
+//             <p>Nama: ".$param_fullname."</p>";
 
 
-            require 'vendor\autoload.php';
-            $mail = new PHPMailer(TRUE);
+//             require 'vendor\autoload.php';
+//             $mail = new PHPMailer(TRUE);
 
-            try {
-                //Server settings
-                $mail->isSMTP();                                     
-                $mail->Host = 'smtp.gmail.com';                      
-                $mail->SMTPAuth = true;
+//             try {
+//                 //Server settings
+//                 $mail->isSMTP();                                     
+//                 $mail->Host = 'smtp.gmail.com';                      
+//                 $mail->SMTPAuth = true;
                 
-                $mail->Username = 'muhdhabib301@gmail.com'; 
-                $mail->Password = 'mhyja8144';                               
+//                 $mail->Username = 'muhdhabib301@gmail.com'; 
+//                 $mail->Password = 'mhyja8144';                               
                                     
-                $mail->SMTPOptions = array(
-                    'ssl' => array(
-                    'verify_peer' => false,
-                    'verify_peer_name' => false,
-                    'allow_self_signed' => true
-                    )
-                );                         
-                $mail->SMTPSecure = 'ssl';                           
-                $mail->Port = 465;                                   
+//                 $mail->SMTPOptions = array(
+//                     'ssl' => array(
+//                     'verify_peer' => false,
+//                     'verify_peer_name' => false,
+//                     'allow_self_signed' => true
+//                     )
+//                 );                         
+//                 $mail->SMTPSecure = 'ssl';                           
+//                 $mail->Port = 465;                                   
 
-                $mail->setFrom('muhdhabib301@gmail.com', 'Lesong Mart Career');
+//                 $mail->setFrom('muhdhabib301@gmail.com', 'Lesong Mart Career');
                 
-                //Recipients
-                $mail->addAddress('habibslayer@gmail.com');
+//                 //Recipients
+//                 $mail->addAddress('habibslayer@gmail.com');
                
-                //Content
-                $mail->isHTML(true);                                  
-                $mail->Subject = 'Permohonan Pekerjaan Lesong Mart';
-                $mail->Body    = $message;
+//                 //Content
+//                 $mail->isHTML(true);                                  
+//                 $mail->Subject = 'Permohonan Pekerjaan Lesong Mart';
+//                 $mail->Body    = $message;
 
-                $mail->send();
+//                 $mail->send();
 
-                $_SESSION['success'] = 'Email has been sent.';
+//                 $_SESSION['success'] = 'Email has been sent.';
 
-            } catch (Exception $e) {
-                $_SESSION['error'] = 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo;
+//             } catch (Exception $e) {
+//                 $_SESSION['error'] = 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo;
                 
-            }
+//             }
                 // Redirect to login page
                 ?>
                 <script language="JavaScript">
