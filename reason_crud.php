@@ -37,6 +37,21 @@ if (isset($_POST['update'])) {
   }
    
 
+   $message = "
+            
+            <p>Assalamualaikum encik/puan ".$editrow['fullname']."</p>
+
+            <p>Terima kasih atas minat anda untuk berkerja bersama kami.</p>
+            <p>Selepas menyemak kelayakan anda, kami mohon maaf kerana kami tidak dapat menawarkan anda jawatan kali ini. Ini bukan cerminan kemahiran dan kebolehan anda tetapi keperluan kami untuk memastikan kami memadankan pekerjaan yang betul dengan orang yang betul.</p>
+
+            <p>Kami doakan anda berjaya dalam usaha anda pada masa hadapan.</p>
+
+            <p>Terima kasih.</p>
+          ";
+
+          require 'vendor\autoload.php';
+
+  $mail = new PHPMailer(TRUE);
 
   try {
 
@@ -54,6 +69,49 @@ if (isset($_POST['update'])) {
     $status = $check;
     $reason = $_POST['reason'];
 
+
+    try {
+                //Server settings
+                $mail->isSMTP();                                     
+                $mail->Host = 'smtp.gmail.com';                      
+                $mail->SMTPAuth = true;
+                
+                $mail->Username = 'muhdhabib301@gmail.com'; 
+                $mail->Password = 'mhyja8144';                               
+                                    
+                $mail->SMTPOptions = array(
+                    'ssl' => array(
+                    'verify_peer' => false,
+                    'verify_peer_name' => false,
+                    'allow_self_signed' => true
+                    )
+                );                         
+                $mail->SMTPSecure = 'ssl';                           
+                $mail->Port = 465;                                   
+
+                $mail->setFrom('muhdhabib301@gmail.com', 'Lesong Mart Career');
+                $mail->AddReplyTo('muhdhabib301@gmail.com');
+                
+                //Recipients
+                $mail->addAddress($editrow['email']);
+               
+                //Content
+                $mail->isHTML(true);                                  
+                $mail->Subject = 'Lesong Mart Career';
+                $mail->Body    = $message;
+
+                $mail->send();
+
+                
+                unset($_SESSION['email']);
+
+                $_SESSION['success'] = 'Email has been sent.';
+
+            } 
+            catch (Exception $e) {
+                $_SESSION['error'] = 'Message could not be sent. Mailer Error: '.$mail->ErrorInfo;
+                header("Location: logout.php");
+            }
      
     $stmt2->execute();
 
